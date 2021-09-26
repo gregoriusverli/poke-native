@@ -1,14 +1,19 @@
 import React from 'react';
 import {View, Text, SafeAreaView, StyleSheet, Pressable} from 'react-native';
 import {windowHeight, windowWidth} from '../globarVar';
-
-export default function Home() {
+import {Button, ButtonGroup} from 'native-base';
+export default function Home({navigation}) {
+  function goPokedex() {
+    navigation.replace('splash');
+  }
   return (
     <View style={styles.container}>
-      <Text style={{fontSize: 24}}>Wellcome to Poke App</Text>
-      <Pressable style={styles.btn}>
-        <Text>Show Pokedex</Text>
-      </Pressable>
+      <Button
+        onPress={() => {
+          goPokedex();
+        }}>
+        Show Pokedex
+      </Button>
     </View>
   );
 }

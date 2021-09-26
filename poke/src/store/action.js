@@ -13,6 +13,7 @@ export function setListPokemon(data) {
     type: LIST_POKE,
     payload: data,
   };
+  return dataPoke;
 }
 
 export function fetchListPoke() {
